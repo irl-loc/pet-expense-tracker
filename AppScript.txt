@@ -1,0 +1,40 @@
+Create a complete web application for "Pet Expense Tracker" in the Pets niche.
+
+DESIGN REQUIREMENTS:
+- Apple-style design with clean, modern aesthetics
+- Dark theme with #161616 background color
+- Use #acf92c as the accent color for buttons and highlights
+- Montserrat font family (regular and bold weights)
+- Rounded corners, soft shadows, and subtle hover effects
+- Responsive design for desktop and mobile
+
+LANDING PAGE:
+- Hero section with compelling headline about the Pet Expense Tracker
+- Clear value proposition explaining how it solves problems in Pets
+- Feature highlights with icons and descriptions
+- Pricing section showing $29/month subscription
+- "Start Free Trial" and "Buy Now" buttons with proper styling
+- Footer with links and contact information
+
+FUNCTIONAL APP (Behind Paywall):
+- Complete Pet Expense Tracker functionality with all necessary features
+- User-friendly interface with intuitive navigation
+- Input forms, calculation logic, and result displays as needed
+- Data persistence using localStorage
+- Interactive elements and real-time updates
+- Professional dashboard layout
+
+PAYMENT INTEGRATION:
+- Mock payment system that simulates subscription purchase
+- After "payment", unlock the full app functionality
+- User authentication simulation (login/signup forms)
+- Subscription status display
+
+ADDITIONAL FEATURES:
+- Loading states and smooth animations
+- Error handling and validation
+- Mobile-responsive design
+- Professional typography and spacing
+- Consistent color scheme throughout
+
+Make this a production-ready web application that users would actually want to pay $29/month for. Include realistic data, professional copy, and polished interactions.

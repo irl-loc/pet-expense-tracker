@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Expense Tracker - Track Your Pet's Spending</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🐾 Pet Expense Tracker</h1>
+                <p class="tagline">Keep track of your pet's spending with ease</p>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-tab="dashboard">
+                <span class="tab-icon">📊</span>
+                Dashboard
+            </button>
+            <button class="nav-tab" data-tab="add-expense">
+                <span class="tab-icon">➕</span>
+                Add Expense
+            </button>
+            <button class="nav-tab" data-tab="history">
+                <span class="tab-icon">📋</span>
+                History
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Tab -->
+            <section id="dashboard" class="tab-content active">
+                <div class="dashboard-container">
+                    <!-- Total Spending Card -->
+                    <div class="summary-card">
+                        <h2>Total Spending (This Month)</h2>
+                        <div class="total-amount">
+                            <span class="currency">$</span>
+                            <span id="totalAmount">0.00</span>
+                        </div>
+                        <p class="summary-subtitle">Track your pet care expenses</p>
+                    </div>
+
+                    <!-- Category Breakdown -->
+                    <div class="category-breakdown">
+                        <h3>Spending by Category</h3>
+                        <div id="categoryList" class="category-list">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Recent Expenses -->
+                    <div class="recent-expenses">
+                        <h3>Recent Expenses</h3>
+                        <div id="recentExpensesList" class="expense-list">
+                            <p class="empty-state">No expenses yet. Add your first expense to get started!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add Expense Tab -->
+            <section id="add-expense" class="tab-content">
+                <div class="form-container">
+                    <h2>Add New Expense</h2>
+                    <form id="expenseForm" class="expense-form">
+                        <!-- Amount Input -->
+                        <div class="form-group">
+                            <label for="amount">Amount ($)</label>
+                            <input 
+                                type="number" 
+                                id="amount" 
+                                placeholder="0.00" 
+                                step="0.01" 
+                                min="0" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Category Select -->
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="">Select a category</option>
+                                <option value="Food">🍖 Food</option>
+                                <option value="Toys">🎾 Toys</option>
+                                <option value="Treats">🍪 Treats</option>
+                                <option value="Vet Bills">🏥 Vet Bills</option>
+                                <option value="Medication">💊 Medication</option>
+                                <option value="Grooming">✂️ Grooming</option>
+                                <option value="Accessories">🦴 Accessories</option>
+                                <option value="Other">📌 Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Date Input -->
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Notes Input (Optional) -->
+                        <div class="form-group">
+                            <label for="notes">Notes (Optional)</label>
+                            <textarea 
+                                id="notes" 
+                                placeholder="Add any notes about this expense..."
+                                rows="3"
+                            ></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary">
+                            💾 Save Expense
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- History Tab -->
+            <section id="history" class="tab-content">
+                <div class="history-container">
+                    <h2>Expense History</h2>
+                    
+                    <!-- Filter Options -->
+                    <div class="filter-controls">
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="Food">🍖 Food</option>
+                            <option value="Toys">🎾 Toys</option>
+                            <option value="Treats">🍪 Treats</option>
+                            <option value="Vet Bills">🏥 Vet Bills</option>
+                            <option value="Medication">💊 Medication</option>
+                            <option value="Grooming">✂️ Grooming</option>
+                            <option value="Accessories">🦴 Accessories</option>
+                            <option value="Other">📌 Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Expense List -->
+                    <div id="fullExpenseList" class="full-expense-list">
+                        <p class="empty-state">No expenses recorded yet. Start tracking your pet's expenses!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Pet Expense Tracker. Track your pet's spending with ease.</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
